@@ -1,18 +1,23 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import ButtonsModule from "@/components/modules/butttons";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="p-32 flex justify-center items-center h-screen">
-      <Button
-        style={{
-          background:
-            "linear-gradient(91.44deg, #FFC501 4.3%, #FF7F1B 105.87%)",
-          color: "#841912",
-        }}
-      >
-        Hello world
-      </Button>
-    </div>
+    <>
+      <div className="">
+        <div className="p-7 flex justify-center items-center ">
+          <ul className="flex gap-6">
+            <li>Home</li>
+            <li>Buttons</li>
+            <Link href="/calender">
+              <li>Calender</li>
+            </Link>
+            <li className="text-gray-400">Forms</li>
+            <li className="text-gray-400">Dashboard</li>
+          </ul>
+        </div>
+        <ButtonsModule />
+      </div>
+    </>
   );
 }
