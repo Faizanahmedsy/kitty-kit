@@ -10,13 +10,14 @@ export default function Hero() {
        
         </h1> */}
       <div className="flex">
-        <WordPullUp
+        <GradualSpacing
           className="text-6xl  font-extrabold tracking-[-0.02em] text-blue-700  dark:text-white md:text-7xl md:leading-[5rem]"
-          words="Kitty Kit"
+          text="Kitty Kit, "
         />
-        <WordPullUp
+        <GradualSpacing
           className="text-6xl  font-extrabold tracking-[-0.02em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
-          words="is the frontend"
+          text="a frontend"
+          delayMultiple={0.04}
         />
       </div>
       <div>
