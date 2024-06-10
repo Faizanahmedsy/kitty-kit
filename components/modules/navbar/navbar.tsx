@@ -13,6 +13,29 @@ export function Logo() {
 }
 
 export default function Navbar() {
+  const navLinks = [
+    {
+      title: "Home",
+      url: "/",
+    },
+    {
+      title: "Calender",
+      url: "/calender",
+    },
+    {
+      title: "Buttons",
+      url: "/",
+    },
+    {
+      title: "Forms",
+      url: "/",
+    },
+    {
+      title: "Dashboard",
+      url: "/",
+    },
+  ] as { title: string; url: string }[];
+
   return (
     <>
       <div className="p-7 flex justify-between items-center ">
@@ -21,9 +44,9 @@ export default function Navbar() {
           <Link href="/">
             <li>Home</li>
           </Link>
-          {/* <Link href="/">
-          <li>Buttons</li>
-        </Link> */}
+          <Link href="/buttons">
+            <li>Buttons</li>
+          </Link>
           <Link href="/calender">
             <li>Calender</li>
           </Link>
