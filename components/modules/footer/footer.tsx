@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -7,8 +8,12 @@ export default function Footer() {
       <Separator />
       <div className="flex justify-center items-center w-full font-extrabold">
         <div className="text-md py-6">
-          Made By Faizanahmed for{" "}
-          <span className="text-blue-800">devstree</span>
+          Made with ❤️ by
+          <span className="text-blue-800 ml-1">
+            <Link href="https://www.linkedin.com/in/faizanahmed-saiyed/">
+              Faizanahmed
+            </Link>
+          </span>
         </div>
       </div>
     </footer>

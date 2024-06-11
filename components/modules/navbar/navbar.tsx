@@ -44,6 +44,13 @@ export default function Navbar() {
           <Link href="/">
             <li>Home</li>
           </Link>
+          <Link href="/tricks">
+            <li>Tricks</li>
+          </Link>
+          <Link href="/helpers">
+            <li>Helpers</li>
+          </Link>
+
           <Link href="/buttons">
             <li>Buttons</li>
           </Link>
