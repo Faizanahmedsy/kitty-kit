@@ -3,7 +3,11 @@ import { Link as LucidLinkIcon } from "lucide-react";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/resources`);
+  const res = await fetch(
+    `${
+      process.env.NEXT_PUBLIC_API_ENDPOINT || "http://localhost:3000/api"
+    }/resources`
+  );
 
   // console.log("res: ", process.env.NEXT_PUBLIC_API_ENDPOINT);
 
