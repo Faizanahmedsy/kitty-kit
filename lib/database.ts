@@ -234,7 +234,268 @@ export const displayMessage = (message) => {
     language: "jsx",
     showLineNumbers: true,
   },
-];
+  {
+    title: "Local Storage Config",
+    code: `const getItem = (key) => {
+  const data = typeof window !== "undefined" ? localStorage.getItem(key) : "";
+
+  try {
+    return JSON.parse(data);
+  } catch (err) {
+    return data;
+  }
+};
+
+const setItem = (key, value) => {
+  const stringify = typeof value !== "string" ? JSON.stringify(value) : value;
+
+  if (typeof window === "undefined") return;
+
+  return localStorage ? localStorage.setItem(key, stringify) : "";
+};
+
+const removeItem = (key) => {
+  // if (typeof window === "undefined") return;
+  localStorage.removeItem(key);
+};
+
+export { getItem, setItem, removeItem };
+`,
+    language: "jsx",
+    showLineNumbers: true,
+  },
+  {
+    title: "Secure Local Storage Config",
+    code: `import secureLocalStorage from "react-secure-storage";
+
+const getItem = (key) => {
+  const data =
+    typeof window !== "undefined" ? secureLocalStorage.getItem(key) : "";
+
+  try {
+    return JSON.parse(data);
+  } catch (err) {
+    return data;
+  }
+};
+
+const setItem = (key, value) => {
+  const stringify = typeof value !== "string" ? JSON.stringify(value) : value;
+  return secureLocalStorage.setItem(key, stringify);
+};
+
+const removeItem = (key) => {
+  secureLocalStorage.removeItem(key);
+};
+
+export { getItem, setItem, removeItem };`,
+    language: "jsx",
+    showLineNumbers: true,
+  },
+  {
+    title: "Session Storage Config",
+    code: `const getItem = (key) => {
+  const data = typeof window !== "undefined" ? sessionStorage.getItem(key) : "";
+
+  try {
+    return JSON.parse(data);
+  } catch (err) {
+    return data;
+  }
+};
+
+const setItem = (key, value) => {
+  const stringify = typeof value !== "string" ? JSON.stringify(value) : value;
+
+  if (typeof window === "undefined") return;
+
+  return sessionStorage ? sessionStorage.setItem(key, stringify) : "";
+};
+
+const removeItem = (key) => {
+  // if (typeof window === "undefined") return;
+  sessionStorage.removeItem(key);
+};
+
+export { getItem, removeItem, setItem };`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "Tailwind Cn Function",
+    code: `import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "Parse Boolean",
+    code: `export const parseBoolean = (value) => {
+  if (typeof value === "boolean") {
+    // If it's already a boolean, return it as is
+    return value;
+  }
+
+  // If it's a string, convert it to lowercase and check its value
+  if (typeof value === "string") {
+    const lowerCaseValue = value.toLowerCase();
+    if (lowerCaseValue === "true" || lowerCaseValue === "1") {
+      return true;
+    } else if (lowerCaseValue === "false" || lowerCaseValue === "0") {
+      return false;
+    }
+  }
+
+  if (typeof value === "number") {
+    if (value === 0) {
+      return false;
+    }
+    if (value === 1) {
+      return true;
+    }
+  }
+
+  // If it's neither a boolean nor a recognized string, return a custom error object
+  return false; // The string in the constructor is the error message
+};`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "PhoneNumber Formatters",
+    code: `export function inputFormatPhoneNumber(phoneNumber) {
+    let inputValue;
+    if (phoneNumber) {
+      inputValue = phoneNumber.replace(/-/g, "");
+      if (inputValue.length > 3 && inputValue.length <= 6) {
+        inputValue = \`\${inputValue.slice(0, 3)}-\${inputValue.slice(3)}\`;
+      } else if (inputValue.length > 6) {
+        inputValue = \`\${inputValue.slice(0, 3)}-\${inputValue.slice(
+      3,
+      6
+    )}-\${inputValue.slice(6)}\`;
+      } else {
+        inputValue = inputValue;
+      }
+      return inputValue;
+    } else return "";
+  }
+
+  export const removeDashFromPhoneNumber = (phoneNumber) => {
+    return phoneNumber.replace(/[-\s]/g, "");
+  };
+
+  export const dashFormat = (number) => {
+    // Check if the number is valid
+    if (typeof number !== "string" || number.length !== 10 || isNaN(number)) {
+      return "Invalid phone number";
+    }
+
+    // Extract area code, exchange code, and subscriber number
+    var areaCode = number.substring(0, 3);
+    var exchangeCode = number.substring(3, 6);
+    var subscriberNumber = number.substring(6);
+
+    // Format the number
+    var formattedNumber =
+      "(" + areaCode + ")-" + exchangeCode + "-" + subscriberNumber;
+
+    return formattedNumber;
+  };
+
+  export const preventPhoneInputKeys = (event) => {
+    // Get the key code of the pressed key
+    const keyCode = event.keyCode || event.which;
+    // Check if Ctrl key is pressed along with 'a' (Ctrl+A  = 65 ,Ctrl + C =67, Ctrl + V = 86)
+    const isCtrlAPressed = (event.ctrlKey || event.metaKey) && keyCode === 65;
+    const isCtrlCPressed = (event.ctrlKey || event.metaKey) && keyCode === 67;
+    const isCtrlVPressed = (event.ctrlKey || event.metaKey) && keyCode === 86;
+
+    if (
+      !(
+        (keyCode >= 48 && keyCode <= 57) || // digits 0-9
+        keyCode === 8 || // backspace
+        keyCode === 9 || // tab
+        keyCode === 46 || // delete
+        (keyCode >= 37 && keyCode <= 40) || // arrow keys
+        (keyCode >= 96 && keyCode <= 105) || // arrow keys
+        isCtrlAPressed ||
+        isCtrlCPressed ||
+        isCtrlVPressed
+      )
+    ) {
+      event.preventDefault(); // Prevent input
+    }
+  };
+`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "Is Email Or Phone",
+    code: `export const isEmailOrPhoneNumber = (data) => {
+  return data.includes("@") ? "email" : "phone";
+};
+`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "axios config / dataservice / instance",
+    code: `import axios from "axios";
+import { BASEURL } from "./api.js";
+import { toast } from "sonner";
+import { getItem } from "@/lib/localStorage.js";
+const instance = axios.create({
+  baseURL: BASEURL,
+});
+
+instance.interceptors.request.use(
+  function (config) {
+    // Add Authorization header if token exists in localStorage
+    const token = getItem("customerAuthToken");
+    if (token) {
+      config.headers.Authorization = \`\Bearer \${token}\`;
+    }
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
+
+// Add a response interceptor
+instance.interceptors.response.use(
+  function (response) {
+    // Return the response if status is not in the 400 or 500 range
+    return response;
+  },
+  function (error) {
+    // Show an alert for errors in the 400 or 500 range
+    if (
+      error.response &&
+      error.response.status >= 400 &&
+      error.response.status < 600
+    ) {
+      toast.error(
+        \`Error: \${error.response.status} - \${error.response.data.message}\`
+      );
+    }
+    return Promise.reject(error);
+  }
+);
+
+export default instance;
+`,
+    language: "js",
+    showLineNumbers: true,
+  },
+] as const;
 
 // handlers
 export const getPosts = () => PostData;

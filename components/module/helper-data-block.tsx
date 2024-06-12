@@ -1,6 +1,12 @@
 import Textv3 from "@/components/module/textv3";
 import React from "react";
 import CodeContainer from "./code-container";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 async function getData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/helpers`);
@@ -21,15 +27,17 @@ export default async function HelpersCards() {
   const { data } = await getData();
 
   return (
-    <main>
-      <div className="flex">
-        {data.map((item: any, i: number) => (
-          <div key={i}>
-            <Textv3>{item.title}</Textv3>
-            <CodeContainer item={item} />
-          </div>
-        ))}
-      </div>
-    </main>
+    <div className="">
+      {data.map((item: any, i: any) => (
+        <Accordion type="single" collapsible key={i}>
+          <AccordionItem value={"item-1"}>
+            <AccordionTrigger>{item.title}</AccordionTrigger>
+            <AccordionContent>
+              <CodeContainer item={item} />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      ))}
+    </div>
   );
 }
