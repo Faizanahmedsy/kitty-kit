@@ -1,5 +1,4 @@
 import HelpersCards from "@/components/module/helper-data-block";
-import Textv2 from "@/components/module/textv2";
 import { SquareArrowOutUpRight } from "lucide-react";
 
 export default function HelpersPage() {
