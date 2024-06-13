@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 async function getData() {
-  const res = await fetch(`http://localhost:3000/api/helpers`);
+  const res = await fetch(`http://https://kitty-kit.vercel.app/api/helpers`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary

@@ -3,7 +3,7 @@ import { Link as LucidLinkIcon } from "lucide-react";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`http://localhost:3000/api/resources`);
+  const res = await fetch(`http://https://kitty-kit.vercel.app/api/resources`);
 
   // console.log("res: ", process.env.NEXT_PUBLIC_API_ENDPOINT);
 
