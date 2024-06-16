@@ -1,4 +1,4 @@
-import Textv2 from "@/components/module/textv2";
+import Textv2 from "@/components/modules/textv2";
 
 export default function TricksPage() {
   return (

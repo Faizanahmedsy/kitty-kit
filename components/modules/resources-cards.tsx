@@ -1,9 +1,10 @@
 import { Card, CardTitle } from "@/components/ui/card";
+import { BASEURL } from "@/services/endPoints";
 import { Link as LucidLinkIcon } from "lucide-react";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`http://localhost:3000/api/resources`);
+  const res = await fetch(`${BASEURL}api/resources`);
 
   // console.log("res: ", process.env.NEXT_PUBLIC_API_ENDPOINT);
 

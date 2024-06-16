@@ -1,5 +1,5 @@
-import Hero from "@/components/module/hero";
-import Resources from "@/components/module/resources";
+import Hero from "@/components/modules/hero";
+import Resources from "@/components/modules/resources";
 
 export default function Home() {
   return (

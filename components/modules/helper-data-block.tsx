@@ -1,5 +1,4 @@
-import Textv3 from "@/components/module/textv3";
-import React from "react";
+import Textv3 from "@/components/modules/textv3";
 import CodeContainer from "./code-container";
 import {
   Accordion,
@@ -7,9 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BASEURL } from "@/services/endPoints";
 
 async function getData() {
-  const res = await fetch(`http://localhost:3000/api/helpers`);
+  const res = await fetch(`${BASEURL}api/helpers`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -27,7 +27,7 @@ export default async function HelpersCards() {
   const { data } = await getData();
 
   return (
-    <div className="">
+    <>
       {data.map((item: any, i: any) => (
         <Accordion type="single" collapsible key={i}>
           <AccordionItem value={"item-1"}>
@@ -38,6 +38,6 @@ export default async function HelpersCards() {
           </AccordionItem>
         </Accordion>
       ))}
-    </div>
+    </>
   );
 }
