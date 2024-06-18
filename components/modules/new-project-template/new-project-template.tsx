@@ -19,8 +19,9 @@ export default function NewProjectTemplate() {
           <div>
             <h2 className="text-4xl font-bold">New Project Template</h2>
             <p className="py-4">
-              This is a new project template. You can use this template to start
-              a new project.
+              This template is already preconfigured with all the necessary
+              tools and configurations to get you started with your next
+              project.
             </p>
           </div>
           <div>
