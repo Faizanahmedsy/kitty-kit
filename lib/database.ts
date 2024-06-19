@@ -1,6 +1,6 @@
 import { title } from "process";
 
-const PostData = [
+export const PostData = [
   {
     title: "Magic Ui",
     href: "https://magicui.design/",
