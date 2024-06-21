@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Code, monoBlue } from "react-code-blocks";
 import { toast } from "sonner";
+import CopyBtn from "../copy-btn";
 
+export const codeText = `git clone https://github.com/Faizanahmedsy/next-starter-v1.git`;
 export default function NewProjectTemplate() {
-  const codeText = `git clone https://github.com/Faizanahmedsy/next-starter-v1.git`;
-
   function copyToClipboard() {
     toast.success("Copied to clipboard");
     navigator.clipboard.writeText(codeText);
@@ -25,16 +25,13 @@ export default function NewProjectTemplate() {
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-muted-foreground my-2">
-              Clone the template repo
-            </h2>
-            <Code text={codeText} language="shell" theme={monoBlue} />
-            <div
-              onClick={() => copyToClipboard()}
-              className="bg-muted text-sm inline-block px-3 py-2 cursor-pointer rounded-xl my-3"
-            >
-              Copy to clipboard
+            <div className="flex justify-between">
+              <h2 className="text-2xl font-bold text-muted-foreground my-2">
+                Clone the template repo
+              </h2>
+              <CopyBtn />
             </div>
+            <Code text={codeText} language="shell" theme={monoBlue} />
           </div>
         </div>
         <p className="py-4 font-semibold text-muted-foreground">Tech Stack</p>
