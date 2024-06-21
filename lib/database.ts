@@ -235,6 +235,49 @@ export const displayMessage = (message) => {
     showLineNumbers: true,
   },
   {
+    title: "Number Helpers",
+    code: `function formatNumberWithCommas(input) {
+    if (isNaN(input)) {
+        return 'Invalid input'; // Handle non-numeric inputs
+    }
+
+    // Convert input to a number to handle cases like numeric strings
+    const number = parseFloat(input);
+
+    if (number === 0) {
+        return '0';
+    }
+
+    // Split the number into integer and fractional parts
+    const parts = number.toString().split('.');
+    const integerPart = parts[0];
+    const fractionalPart = parts.length > 1 ? parts[1] : '';
+
+    // Add commas to the integer part
+    const formattedIntegerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+    // Combine integer and fractional parts
+    return fractionalPart ? \`\${formattedIntegerPart}.\${fractionalPart}\` : formattedIntegerPart;
+}
+
+// Example usage
+console.log(formatNumberWithCommas(1000));         // Output: 1,000
+console.log(formatNumberWithCommas(40000));        // Output: 40,000
+console.log(formatNumberWithCommas(1234567));      // Output: 1,234,567
+console.log(formatNumberWithCommas(-1234567));     // Output: -1,234,567
+console.log(formatNumberWithCommas(1234.567));     // Output: 1,234.567
+console.log(formatNumberWithCommas(0.1234));       // Output: 0.1234
+console.log(formatNumberWithCommas('1000'));       // Output: 1,000
+console.log(formatNumberWithCommas('abcd'));       // Output: Invalid input
+console.log(formatNumberWithCommas(null));         // Output: Invalid input
+console.log(formatNumberWithCommas(undefined));    // Output: Invalid input
+console.log(formatNumberWithCommas(NaN));          // Output: Invalid input
+console.log(formatNumberWithCommas(0));            // Output: 0
+`,
+    language: "jsx",
+    showLineNumbers: true,
+  },
+  {
     title: "Local Storage Config",
     code: `const getItem = (key) => {
   const data = typeof window !== "undefined" ? localStorage.getItem(key) : "";
