@@ -377,7 +377,7 @@ export function cn(...inputs) {
     showLineNumbers: true,
   },
   {
-    title: "Parse Boolean",
+    title: "Parse Boolean (By Tejus)",
     code: `export const parseBoolean = (value) => {
   if (typeof value === "boolean") {
     // If it's already a boolean, return it as is
