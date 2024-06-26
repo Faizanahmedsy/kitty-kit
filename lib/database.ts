@@ -23,7 +23,14 @@ export const PostData = [
   },
 ];
 
-export const HelpersData = [
+export type HelperDataType = {
+  title: string;
+  code: string;
+  language: string;
+  showLineNumbers: boolean;
+}[];
+
+export const HelpersData: HelperDataType = [
   {
     title: "Display Helpers",
     code: `import { toast } from "sonner";
@@ -480,11 +487,102 @@ export function cn(...inputs) {
     showLineNumbers: true,
   },
   {
+    title: "Encode Query Params",
+    code: `export const encodeQueryParams = (params) => {
+  const queryItems = [];
+  for (let key in params) {
+    if (
+      params.hasOwnProperty(key) &&
+      params[key] !== "" &&
+      typeof params[key] !== "undefined"
+    ) {
+      queryItems.push(
+        \`\${encodeURIComponent(key)}=\${encodeURIComponent(params[key])}\`
+      );
+    }
+  }
+  return queryItems.length > 0 ? \`?$\{queryItems.join("&")}\` : "";
+};`,
+    language: "",
+    showLineNumbers: true,
+  },
+  {
+    title: "formatDateFromNow",
+    code: `export const formatDateFromNow = (dateString) => {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diff = now - date;
+  const seconds = Math.floor(diff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const months = Math.floor(days / 30);
+
+  if (months > 0) {
+    return \` \${months} month\${months > 1 ? "s" : ""} ago\`;
+  } else if (days > 0) {
+    return \`\${days} day\${days > 1 ? "s" : ""} ago\`;
+  } else if (hours > 0) {
+    return \`\${hours} hour\${hours > 1 ? "s" : ""} ago\`;
+  } else if (minutes > 0) {
+    return \`\${minutes} minute\${minutes > 1 ? "s" : ""} ago\`;
+  } else {
+    return \`\${seconds} second\${seconds !== 1 ? "s" : ""} ago\`;
+  }
+};`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
     title: "Is Email Or Phone",
     code: `export const isEmailOrPhoneNumber = (data) => {
   return data.includes("@") ? "email" : "phone";
 };
 `,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "convertUTCToReadableTime",
+    code: `export function convertUTCToReadableTime(utcTimestamp) {
+  // Given UTC timestamp
+  let utcDate = new Date(utcTimestamp);
+
+  // Convert to IST by adding 5 hours and 30 minutes
+  let istOffset = 5.5 * 60 * 60 * 1000; // IST offset in milliseconds
+  let istDate = new Date(utcDate.getTime() + istOffset);
+
+  // Format IST date in 'YYYY-MM-DDTHH:mm:ss.sss+05:30' format
+  let year = istDate.getFullYear();
+  let month = String(istDate.getMonth() + 1).padStart(2, '0');
+  let day = String(istDate.getDate()).padStart(2, '0');`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
+    title: "daysRemaining",
+    code: `export function daysRemaining(date1Str, date2Str) {
+  function parseDate(dateStr) {
+    const parts = dateStr.split('-');
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1; // Months are 0-based in JavaScript Date
+    const year = parseInt(parts[2], 10);
+    return new Date(year, month, day);
+  }
+
+  // Parse the input dates
+  const date1 = parseDate(date1Str);
+  const date2 = parseDate(date2Str);
+
+  // Calculate the difference in time (in milliseconds)
+  const timeDifference = date2.getTime() - date1.getTime();
+
+  // Convert the time difference from milliseconds to days
+  const daysDifference = timeDifference / (1000 * 3600 * 24);
+
+  // Return the number of days remaining
+  return Math.ceil(daysDifference);
+}`,
     language: "js",
     showLineNumbers: true,
   },
