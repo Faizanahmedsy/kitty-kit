@@ -666,6 +666,38 @@ export default instance;
   },
 ] as const;
 
+export const TricksData = [
+  {
+    title: "Public and Private Route Handling in Next JS",
+    explain:
+      "Add this into middleware.js in the root of your project or in src folder(if you have one) Middleware gets called in when ever you change the route. add your protected routes in the matcher array",
+    codeblock: {
+      title: "Middleware.js",
+      code: `import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
+
+
+
+export function middleware(req: NextRequest) {
+  const token = false;
+
+  if (!token) {
+    return NextResponse.redirect(new URL("/", req.url));
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/foo", "/bar"],
+};
+`,
+      language: "js",
+      showLineNumbers: true,
+    },
+  },
+] as const;
+
 // handlers
 export const getPosts = () => PostData;
 
