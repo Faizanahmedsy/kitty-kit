@@ -534,6 +534,34 @@ export function cn(...inputs) {
     showLineNumbers: true,
   },
   {
+    title: "getTodayDate",
+    code: `// DEFINE FUNCTION FOR CALCULATE DAY REMAINING DD-MM-YYYY
+export function daysRemaining(date1Str, date2Str) {
+  function parseDate(dateStr) {
+    const parts = dateStr.split('-');
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1; // Months are 0-based in JavaScript Date
+    const year = parseInt(parts[2], 10);
+    return new Date(year, month, day);
+  }
+
+  // Parse the input dates
+  const date1 = parseDate(date1Str);
+  const date2 = parseDate(date2Str);
+
+  // Calculate the difference in time (in milliseconds)
+  const timeDifference = date2.getTime() - date1.getTime();
+
+  // Convert the time difference from milliseconds to days
+  const daysDifference = timeDifference / (1000 * 3600 * 24);
+
+  // Return the number of days remaining
+  return Math.ceil(daysDifference);
+}`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
     title: "Is Email Or Phone",
     code: `export const isEmailOrPhoneNumber = (data) => {
   return data.includes("@") ? "email" : "phone";
