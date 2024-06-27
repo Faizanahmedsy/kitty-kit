@@ -1,25 +1,46 @@
 import { title } from "process";
 
-export const PostData = [
+export type PostDataType = {
+  title: string;
+  href: string;
+  des?: string;
+}[];
+
+export const PostData: PostDataType = [
   {
     title: "Magic Ui",
+    des: "Best for animated landing pages",
     href: "https://magicui.design/",
   },
   {
     title: "Shadcn",
+    des: "Most Famous next js ui library",
     href: "https://ui.shadcn.com/",
   },
   {
     title: "Aceternity Ui",
+    des: "Best for animated landing pages",
     href: "https://ui.aceternity.com/",
   },
   {
     title: "Lottie Files",
+    des: "Gif Type Animation Vectors, brings life into apps",
     href: "https://lottiefiles.com/",
   },
   {
     title: "Ui Colors",
+    des: "Best for color selection",
     href: "https://uicolors.app/create?ref=producthunt",
+  },
+  {
+    title: "Drag and Drop Component",
+    des: "easy to use drag and drop component",
+    href: "https://ui.mantine.dev/category/dnd/",
+  },
+  {
+    title: "CkEditor",
+    des: "Free Full Feature CkEditor",
+    href: "https://mantine.dev/x/tiptap/#sticky-toolbar",
   },
 ];
 
