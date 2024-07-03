@@ -695,7 +695,7 @@ export default instance;
   },
 ] as const;
 
-export const TricksData = [
+export const unfliteredTricksData = [
   {
     title: "Public and Private Route Handling in Next JS",
     explain:
@@ -704,8 +704,6 @@ export const TricksData = [
       title: "Middleware.js",
       code: `import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
-
-
 
 export function middleware(req: NextRequest) {
   const token = false;
@@ -719,10 +717,7 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: ["/foo", "/bar"],
-};
-`,
-      language: "js",
-      showLineNumbers: true,
+};`,
     },
   },
   {
@@ -735,13 +730,19 @@ export const config = {
 
 const Component = dynamic(() => import("../components/Component"), {
   ssr: false,
-});
-`,
-      language: "js",
-      showLineNumbers: true,
+});`,
     },
   },
 ] as const;
+
+export const TricksData = unfliteredTricksData.map((trick) => ({
+  ...trick,
+  codeblock: {
+    ...trick.codeblock,
+    language: "js",
+    showLineNumbers: true,
+  },
+}));
 
 // handlers
 export const getPosts = () => PostData;
