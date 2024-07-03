@@ -19,8 +19,11 @@ import { cn } from "@/lib/utils";
 export function Logo() {
   return (
     <>
-      <div>
+      <div className="flex justify-center items-center">
         <div className="font-bold text-blue-800 text-2xl">Kitty Kit</div>
+        <div className="border-2 rounded-sm mx-2 text-xs p-1 bg-zinc-200">
+          beta
+        </div>
         {/* <div className="text-sm">By Faizanahmed</div> */}
       </div>
     </>
