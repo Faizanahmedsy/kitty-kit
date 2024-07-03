@@ -1,4 +1,6 @@
+import exp from "constants";
 import { title } from "process";
+import { CodeBlock } from "react-code-blocks";
 
 export type PostDataType = {
   title: string;
@@ -22,6 +24,12 @@ export const PostData: PostDataType = [
     des: "Best for animated landing pages",
     href: "https://ui.aceternity.com/",
   },
+  {
+    title: "Mantine Ui",
+    des: "Fully Featured Component Library",
+    href: "https://mantine.dev/getting-started/",
+  },
+
   {
     title: "Lottie Files",
     des: "Gif Type Animation Vectors, brings life into apps",
@@ -712,6 +720,22 @@ export function middleware(req: NextRequest) {
 export const config = {
   matcher: ["/foo", "/bar"],
 };
+`,
+      language: "js",
+      showLineNumbers: true,
+    },
+  },
+  {
+    title: "Solve All Kinds of Hydration Error in Next JS",
+    explain:
+      "Next JS Renders the client component first time on server and then on Client because of which this error occurs. To solve this error you can use the dynamic import syntax",
+    codeblock: {
+      title: "Dynamic import",
+      code: `import dynamic from "next/dynamic";
+
+const Component = dynamic(() => import("../components/Component"), {
+  ssr: false,
+});
 `,
       language: "js",
       showLineNumbers: true,
