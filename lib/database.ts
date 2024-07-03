@@ -744,6 +744,16 @@ export const TricksData = unfliteredTricksData.map((trick) => ({
   },
 }));
 
+export const MissalinousFeaturedData = [
+  {
+    title: "Admin Dashboard",
+    sub: "Admin dashboard made with shadcn",
+    github: "https://github.com/Kiranism/next-shadcn-dashboard-starter",
+    liveDemo:
+      "https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee",
+  },
+];
+
 // handlers
 export const getPosts = () => PostData;
 
