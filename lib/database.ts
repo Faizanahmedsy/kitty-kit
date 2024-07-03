@@ -752,6 +752,14 @@ export const MissalinousFeaturedData = [
     liveDemo:
       "https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee",
   },
+  {
+    title: "Loaders",
+    sub: "Loaders in react",
+    github: "https://github.com/Kiranism/next-shadcn-dashboard-starter",
+    liveDemo:
+      "https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee",
+    link: "https://www.davidhu.io/react-spinners/",
+  },
 ];
 
 // handlers
