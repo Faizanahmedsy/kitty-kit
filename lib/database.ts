@@ -787,6 +787,12 @@ export const MissalinousFeaturedData = [
     liveDemo: "https://vantezzen.github.io/auto-form/.",
   },
   {
+    title: "Admin Dashboard 2 ",
+    sub: "Admin Dashboard UI built with Shadcn and Vite.",
+    github: "https://github.com/satnaing/shadcn-admin",
+    liveDemo: "https://shadcn-admin.netlify.app/.",
+  },
+  {
     title: "Capture Photo From Camera",
     sub: "Capture Photo From Camera Component directly from your browser",
     github: "https://github.com/UretzkyZvi/capture-photo",
