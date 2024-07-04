@@ -1,30 +1,12 @@
+import {
+  HelperDataType,
+  LandingComponentsDataType,
+  MissalinousFeaturedDataType,
+  PostDataType,
+} from "@/types";
 import exp from "constants";
 import { title } from "process";
 import { CodeBlock } from "react-code-blocks";
-
-export type PostDataType = {
-  title: string;
-  href: string;
-  des?: string;
-}[];
-
-export type LandingComponentsDataType = {
-  title: string;
-  sub?: string;
-  tech?: string[];
-  link: string;
-  github?: string;
-  liveDemo?: string;
-};
-
-export type MissalinousFeaturedDataType = {
-  title: string;
-  sub?: string;
-  link?: string;
-  github?: string;
-  liveDemo?: string;
-  fav?: boolean;
-};
 
 export const PostData: PostDataType = [
   {
@@ -69,13 +51,6 @@ export const PostData: PostDataType = [
     href: "https://mantine.dev/x/tiptap/#sticky-toolbar",
   },
 ];
-
-export type HelperDataType = {
-  title: string;
-  code: string;
-  language: string;
-  showLineNumbers: boolean;
-}[];
 
 export const HelpersData: HelperDataType = [
   {
