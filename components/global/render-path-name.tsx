@@ -6,19 +6,17 @@ type Props = {};
 
 export default function RenderPathName({}: Props) {
   const pathname = usePathname();
-  function transformPath(path) {
+
+  function transformPath(path: string): string {
     return path
-      .replace("/features/", "") // Remove the leading '/features/'
-      .split("/") // Split by '/'
-      .map(
-        (
-          part // Transform each part
-        ) =>
-          part
-            .replace(/-/g, " ") // Replace hyphens with spaces
-            .replace(/\b\w/g, (char) => char.toUpperCase()) // Capitalize the first letter of each word
+      .replace("/features/", "")
+      .split("/")
+      .map((part: string) =>
+        part
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, (char: string) => char.toUpperCase())
       )
-      .join(" -> "); // Join with ' -> '
+      .join(" -> ");
   }
 
   return <div>{transformPath(pathname)}</div>;

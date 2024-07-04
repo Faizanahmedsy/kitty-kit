@@ -8,6 +8,24 @@ export type PostDataType = {
   des?: string;
 }[];
 
+export type LandingComponentsDataType = {
+  title: string;
+  sub?: string;
+  tech?: string[];
+  link: string;
+  github?: string;
+  liveDemo?: string;
+};
+
+export type MissalinousFeaturedDataType = {
+  title: string;
+  sub?: string;
+  link?: string;
+  github?: string;
+  liveDemo?: string;
+  fav?: boolean;
+};
+
 export const PostData: PostDataType = [
   {
     title: "Magic Ui",
@@ -744,7 +762,7 @@ export const TricksData = unfliteredTricksData.map((trick) => ({
   },
 }));
 
-export const MissalinousFeaturedData = [
+export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
   {
     title: "Admin Dashboard",
     sub: "Admin dashboard made with shadcn",
@@ -933,7 +951,7 @@ export const MissalinousFeaturedData = [
   },
 ];
 
-export const LandingComponentsData = [
+export const LandingComponentsData: LandingComponentsDataType[] = [
   {
     title: "Simple Landing",
     sub: "Simple Landing page sections direct copy paste",

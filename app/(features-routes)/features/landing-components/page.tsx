@@ -14,26 +14,22 @@ export default function page({}: Props) {
               <div key={index} className="border p-4 rounded-lg ">
                 <div className="flex justify-between">
                   <div className="font-bold text-xl">{item.title}</div>
-                  {item.fav && (
-                    <div className="text-sm font-bold p-1 rounded-sm bg-orange-100 px-2">
-                      Fav
-                    </div>
-                  )}
                 </div>
                 <div className="h-20 overflow-y-auto">{item.sub}</div>
 
-                {item.tech.length > 0 && (
+                {item.tech && item.tech.length > 0 && (
                   <div className="flex gap-4 mb-3">
-                    {item.tech.map((item, index) => (
+                    {item.tech.map((techItem, index) => (
                       <div
                         key={index}
                         className="text-sm font-bold p-1 rounded-sm bg-zinc-200 px-2"
                       >
-                        {item}
+                        {techItem}
                       </div>
                     ))}
                   </div>
                 )}
+
                 <div className="flex gap-6">
                   {item.link && (
                     <Link
