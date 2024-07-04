@@ -933,6 +933,15 @@ export const MissalinousFeaturedData = [
   },
 ];
 
+export const LandingComponentsData = [
+  {
+    title: "Simple Landing",
+    sub: "Simple Landing page sections direct copy paste",
+    tech: ["tailwind", "shadcn-ui"],
+    link: "https://components.bridger.to/",
+  },
+];
+
 // handlers
 export const getPosts = () => PostData;
 
