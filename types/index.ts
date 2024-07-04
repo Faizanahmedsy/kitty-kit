@@ -13,6 +13,11 @@ export type LandingComponentsDataType = {
   liveDemo?: string;
 };
 
+export type BackgroundDataType = {
+  title: string;
+  link: string;
+};
+
 export type MissalinousFeaturedDataType = {
   title: string;
   sub?: string;

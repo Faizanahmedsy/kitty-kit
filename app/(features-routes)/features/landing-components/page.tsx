@@ -4,7 +4,7 @@ import Link from "next/link";
 
 type Props = {};
 
-export default function page({}: Props) {
+export default function Page({}: Props) {
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-3 my-5">

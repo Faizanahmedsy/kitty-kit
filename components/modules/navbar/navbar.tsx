@@ -72,7 +72,7 @@ export default function Navbar() {
     },
     {
       title: "Features",
-      href: "/features",
+      href: "/features/miscellaneous",
     },
   ];
 

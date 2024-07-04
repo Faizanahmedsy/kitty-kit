@@ -15,6 +15,10 @@ export const sideMenuItems = [
     title: "Landing Page Components",
     href: "/features/landing-components",
   },
+  {
+    title: "Website Backgrounds",
+    href: "/features/backgrounds",
+  },
 ];
 
 export default function FeaturesSidebar({}: Props) {

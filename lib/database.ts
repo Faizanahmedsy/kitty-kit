@@ -1,12 +1,10 @@
 import {
+  BackgroundDataType,
   HelperDataType,
   LandingComponentsDataType,
   MissalinousFeaturedDataType,
   PostDataType,
 } from "@/types";
-import exp from "constants";
-import { title } from "process";
-import { CodeBlock } from "react-code-blocks";
 
 export const PostData: PostDataType = [
   {
@@ -933,9 +931,41 @@ export const LandingComponentsData: LandingComponentsDataType[] = [
     tech: ["tailwind", "shadcn-ui"],
     link: "https://components.bridger.to/",
   },
+  {
+    title: "Animated Bento Grid",
+    sub: "Animated bento grid",
+    tech: ["tailwind", "shadcn-ui", "framer-motion"],
+    link: "https://magicui.design/docs/components/bento-grid",
+  },
+  {
+    title: "Mackbook style dock",
+    sub: "An implementation of the MacOS dock",
+    tech: ["tailwind", "shadcn-ui", "framer-motion"],
+    link: "https://magicui.design/docs/components/dock",
+  },
+  {
+    title: "Cloud of icons",
+    sub: "An interactive 3D tag cloud component",
+    tech: ["tailwind", "shadcn-ui", "framer-motion"],
+    link: "https://magicui.design/docs/components/icon-cloud",
+  },
+
+  {
+    title: "Animated Progress Circle",
+    sub: "Gauge Circle is a component that displays a circular gauge with a percentage value",
+    tech: ["tailwind", "shadcn-ui", "framer-motion"],
+    link: "https://magicui.design/docs/components/gauge-circle",
+  },
 ];
 
-// handlers
+export const BackgroundData: BackgroundDataType[] = [
+  {
+    title: "Modern Backgrounds",
+    link: "https://bg.ibelick.com/",
+  },
+];
+
+// handlers for
 export const getPosts = () => PostData;
 
 export const getHelpers = () => HelpersData;
