@@ -724,6 +724,28 @@ const Component = dynamic(() => import("../components/Component"), {
 });`,
     },
   },
+  {
+    title: "Add a loader for a speacific component",
+    explain:
+      "Some times we are loading a very heavy component for example a 3d Model, in Such case we can add a loader",
+    codeblock: {
+      title: "Add a loader",
+      code: `const Avatar = dynamic(() => import("@/components/avatar/avatar"), {
+  ssr: false,
+  loading: () => (
+    <div className="loader h-[50vh] flex justify-center items-center">
+      <Loader2 className="mr-2 h-[30%] w-[30%] animate-spin" />
+    </div>
+  ),
+});
+
+export default function Home() {
+ return <Avatar />
+}
+
+`,
+    },
+  },
 ] as const;
 
 export const TricksData = unfliteredTricksData.map((trick) => ({
