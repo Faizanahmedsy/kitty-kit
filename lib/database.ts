@@ -404,6 +404,54 @@ export function cn(...inputs) {
     showLineNumbers: true,
   },
   {
+    title: "Zustand State Management Setup",
+    code: `
+import { create } from "zustand";
+
+const initialState = {
+  courses:[]
+};
+
+const globalState = (set) => ({
+  ...initialState,
+  addCourse: (course) => {
+    set((state) => ({
+      courses: [course, ...state.courses],
+    }));
+  },
+  removeCourse: (courseId) => {
+    set((state) => ({
+      courses: state.courses.filter((c) => c.id !== courseId),
+    }));
+  },
+  toggleCourseStatus: (courseId) => {
+    set((state) => ({
+      courses: state.courses.map((course) =>
+        course.id === courseId
+          ? { ...course, completed: !course.completed }
+          : course
+      ),
+    }));
+  },
+});
+
+const useGlobalState = create(globalState);
+
+//Do This if you want to store your state in local storage
+// const useGlobalState = create(
+//   devtools(
+//     persist(globalState, {
+//       name: "test_mode_global_state",
+//     })
+//   )
+// );
+
+export default useGlobalState;
+`,
+    language: "js",
+    showLineNumbers: true,
+  },
+  {
     title: "Parse Boolean (By Tejus)",
     code: `export const parseBoolean = (value) => {
   if (typeof value === "boolean") {
