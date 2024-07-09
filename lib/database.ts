@@ -772,6 +772,28 @@ const Component = dynamic(() => import("../components/Component"), {
 });`,
     },
   },
+  {
+    title: "Add a loader for a speacific component",
+    explain:
+      "Some times we are loading a very heavy component for example a 3d Model, in Such case we can add a loader",
+    codeblock: {
+      title: "Add a loader",
+      code: `const Avatar = dynamic(() => import("@/components/avatar/avatar"), {
+  ssr: false,
+  loading: () => (
+    <div className="loader h-[50vh] flex justify-center items-center">
+      <Loader2 className="mr-2 h-[30%] w-[30%] animate-spin" />
+    </div>
+  ),
+});
+
+export default function Home() {
+ return <Avatar />
+}
+
+`,
+    },
+  },
 ] as const;
 
 export const TricksData = unfliteredTricksData.map((trick) => ({
@@ -868,14 +890,8 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
   },
   {
     title: "Copy to Clipboard",
-    sub: "Minimal Tiptap Editor",
+    sub: "Animated copy to clipboard btn + copy functionality",
     link: "https://ui.lukacho.com/components/copy-to-clipboard",
-  },
-  {
-    title: "Minimal CkEditor",
-    sub: "Minimal Tiptap Editor",
-    github: "https://github.com/Aslam97/shadcn-minimal-tiptap",
-    liveDemo: "https://shadcn-minimal-tiptap.vercel.app/",
   },
   {
     title: "Background Gradients",
@@ -889,7 +905,7 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
   },
   {
     title: "Video Model with video player",
-    sub: "Minimal Tiptap Editor",
+    sub: "Model that pops with a video player",
     link: "https://nyxbui.design/docs/components/video-modal",
   },
   {
@@ -929,15 +945,15 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
     github: "https://github.com/sadmann7/file-uploader",
     liveDemo: "https://uploader.sadmn.com/",
   },
-  {
-    title: "Advance Textarea",
-    sub: "Minimal Tiptap Editor",
-    github: "https://github.com/Aslam97/shadcn-minimal-tiptap",
-    liveDemo: "https://shadcn-minimal-tiptap.vercel.app/",
-  },
+  //
+  //   title: "Advance Textarea",
+  //   sub: "Textarea with character count and auto resize",
+  //   github: "https://github.com/Aslam97/shadcn-minimal-tiptap",
+  //   liveDemo: "https://shadcn-minimal-tiptap.vercel.app/",
+  // },
   {
     title: "Advance Checkboxes",
-    sub: "Minimal Tiptap Editor",
+    sub: "Animated checkboxes with different styles",
     link: "https://www.edilozi.pro/docs/components/checkboxes",
   },
 
@@ -955,7 +971,7 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
   },
   {
     title: "Timeline",
-    sub: "Minimal Tiptap Editor",
+    sub: "Timeline component built with shadcn-ui",
     github: "https://github.com/timDeHof/shadcn-timeline",
     liveDemo: "https://shadcn-timeline.vercel.app/",
   },
