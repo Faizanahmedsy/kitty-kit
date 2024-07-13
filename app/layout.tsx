@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/modules/navbar/navbar";
 import Footer from "@/components/modules/footer/footer";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +23,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Toaster position="top-center" />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster position="top-center" />
+          <Navbar />
+          <main className="mt-11 overflow-hidden">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

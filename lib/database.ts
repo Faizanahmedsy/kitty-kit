@@ -571,7 +571,7 @@ export default useGlobalState;
   }
   return queryItems.length > 0 ? \`?$\{queryItems.join("&")}\` : "";
 };`,
-    language: "",
+    language: "js",
     showLineNumbers: true,
   },
   {

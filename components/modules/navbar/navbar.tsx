@@ -16,13 +16,16 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/global/theme-toggle";
 
 export function Logo() {
   return (
     <>
       <div className="flex justify-center items-center">
-        <div className="font-bold text-blue-800 text-2xl">Kitty Kit</div>
-        <div className="border-2 rounded-sm mx-2 text-xs p-1 bg-zinc-200">
+        <div className="font-bold text-blue-800 text-2xl dark:text-blue-300">
+          Kitty Kit
+        </div>
+        <div className="border-2 rounded-sm mx-2 text-xs p-1 bg-zinc-200 dark:bg-zinc-800">
           beta
         </div>
       </div>
@@ -95,9 +98,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="p-7 flex justify-between items-center ">
+      <div className="px-7 py-2 flex justify-between items-center fixed  w-full top-0 left-0 bg-white dark:bg-background z-50">
         <Logo />
-        <div className="w-[40%]">
+        <div className="">
           <NavigationMenu>
             <NavigationMenuList>
               {navLinks.map((link, index) => (
@@ -106,9 +109,13 @@ export default function Navbar() {
                     <Link href={link.href} legacyBehavior passHref>
                       <div
                         className={cn(
-                          "text-sm font-medium leading-none no-underline outline-none transition-colors hover:bg-blue-100 hover:text-accent-foreground focus:bg-blue-50 focus:text-accent-foreground px-4 py-2 rounded-2xl cursor-pointer select-none",
+                          `text-sm font-medium  leading-none no-underline outline-none transition-colors hover:border-blue-100 dark:hover:border-blue-800  hover:text-accent-foreground focus:border-blue-50   dark:focus:border-blue-800   
+                      
+                          hover:font-bold 
+                         
+                          focus:text-accent-foreground  px-5 py-2 rounded-2xl cursor-pointer select-none`,
                           pathname === link.href
-                            ? "bg-blue-100  text-accent-foreground"
+                            ? "bg-blue-100 dark:bg-blue-700  text-accent-foreground"
                             : ""
                         )}
                       >
@@ -118,12 +125,11 @@ export default function Navbar() {
                   </div>
                 </>
               ))}
-
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Components</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {components.map((component) => (
+                    {components.map((component: any) => (
                       <ListItem
                         key={component.title}
                         title={component.title}
@@ -138,6 +144,7 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
+        <ThemeToggle />
       </div>
     </>
   );

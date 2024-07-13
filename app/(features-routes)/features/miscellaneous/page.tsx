@@ -15,7 +15,7 @@ export default function Page({}: Props) {
                 <div className="flex justify-between">
                   <div className="font-bold text-xl">{item.title}</div>
                   {item.fav && (
-                    <div className="text-sm font-bold p-1 rounded-sm bg-orange-100 px-2">
+                    <div className="text-sm font-bold p-1 rounded-sm bg-orange-100 px-2 dark:bg-orange-800 h-fit">
                       Fav
                     </div>
                   )}

@@ -33,8 +33,9 @@ export default function FeaturesSidebar({}: Props) {
               <Link key={item.href} href={item.href} passHref>
                 <div
                   className={cn(
-                    "text-blue-900 font-medium bg-white rounded-md p-2 my-2 transition-all duration-300 ease-in-out transform hover:scale-105",
-                    item.href == pathname && "bg-blue-100 font-bold"
+                    "text-blue-900 font-medium bg-white rounded-md p-2 my-2 transition-all duration-300 ease-in-out transform hover:scale-105 dark:bg-background dark:text-blue-300",
+                    item.href == pathname &&
+                      "bg-blue-100 font-bold dark:bg-blue-800 dark:text-white"
                   )}
                 >
                   {item.title}

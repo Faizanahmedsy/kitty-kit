@@ -22,7 +22,7 @@ export default function Page({}: Props) {
                     {item.tech.map((techItem, index) => (
                       <div
                         key={index}
-                        className="text-sm font-bold p-1 rounded-sm bg-zinc-200 px-2"
+                        className="text-sm font-bold p-1 rounded-sm bg-zinc-200 px-2 dark:bg-zinc-800"
                       >
                         {techItem}
                       </div>
