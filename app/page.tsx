@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <NewProjectTemplate />
-      <Resources />
+      {/* <Resources /> */}
     </>
   );
 }
