@@ -17,6 +17,13 @@ import {
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/global/theme-toggle";
+import { Menu } from "lucide-react";
+const MobileNavbar = dynamic(
+  () => import("@/components/modules/navbar/mobile-navbar"),
+  { ssr: false }
+);
+import { navLinks } from "@/constants";
+import dynamic from "next/dynamic";
 
 export function Logo() {
   return (
@@ -64,24 +71,6 @@ ListItem.displayName = "ListItem";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const navLinks: { title: string; href: string }[] = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Helpers",
-      href: "/helpers",
-    },
-    {
-      title: "Tricks",
-      href: "/tricks",
-    },
-    {
-      title: "Features",
-      href: "/features/miscellaneous",
-    },
-  ];
 
   const components: { title: string; href: string; description: string }[] = [
     {
@@ -98,9 +87,10 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="px-7 py-2 flex justify-between items-center fixed  w-full top-0 left-0 bg-white dark:bg-background z-50">
+      <div className="px-7 md:py-2 py-4 flex justify-between items-center fixed  w-full top-0 left-0 bg-white dark:bg-background z-50">
         <Logo />
-        <div className="">
+
+        <div className="md:block hidden">
           <NavigationMenu>
             <NavigationMenuList>
               {navLinks.map((link, index) => (
@@ -144,7 +134,13 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <ThemeToggle />
+        <div className="md:block hidden">
+          <ThemeToggle />
+        </div>
+        <div className="md:hidden flex justify-center items-center gap-4">
+          <ThemeToggle />
+          <MobileNavbar />
+        </div>
       </div>
     </>
   );
