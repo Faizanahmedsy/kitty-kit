@@ -1,9 +1,11 @@
 import {
   BackgroundDataType,
+  componentsDataType,
   HelperDataType,
   LandingComponentsDataType,
   MissalinousFeaturedDataType,
   PostDataType,
+  UiLibrariesDataType,
 } from "@/types";
 
 export const PostData: PostDataType = [
@@ -804,7 +806,90 @@ export const TricksData = unfliteredTricksData.map((trick) => ({
     showLineNumbers: true,
   },
 }));
+export const componentData: componentsDataType = [
+  {
+    title: "Animated Model",
+    sub: " dialog that overlays the primary content with a window, drawing  ",
+    link: "https://animata.design/docs/overlay/modal",
+  },
+  {
+    title: "Animated Popover",
+    link: "https://ibelick.com/lab/family-popover-menu",
+  },
+  {
+    title: "Github style shiny cards",
+    link: "https://ibelick.com/lab/card-spotlight",
+  },
+  {
+    title: "Animated Buttom",
+    link: "https://ibelick.com/lab/button-gooey",
+  },
+  {
+    title: "Mouse Follow Caption",
+    link: "https://ibelick.com/lab/mouse-follow-caption",
+  },
+  {
+    title: "IOS Slide to unlock",
+    link: "https://ibelick.com/lab/ios-slide-unlock",
+  },
+  {
+    title: "Circular Exploding Menu",
+    link: "https://ibelick.com/lab/exploding-menu",
+  },
+  {
+    title: "Browser Mock",
+    link: "https://ui.lukacho.com/components/mock-browser",
+  },
+  {
+    title: "Modern Tabs",
+    link: "https://ui.lukacho.com/components/tab-list",
+  },
+];
 
+export const useFullWebsites = [
+  {
+    title: "Free to use 404 pages",
+    sub: "",
+    link: "https://error404.fun/",
+  },
+  {
+    title: "Free illustrations",
+    link: "https://undraw.co/search",
+  },
+];
+
+export const uiLibrariesData: UiLibrariesDataType[] = [
+  {
+    title: "ShadCn",
+    sub: "Best and Most customizable UI Library",
+    link: "https://ui.shadcn.com/",
+    fav: true,
+  },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com/",
+  },
+  {
+    title: "Magic UI",
+    link: "https://magicui.design/",
+  },
+  {
+    title: "Hover Dev",
+    link: "https://www.hover.dev/",
+  },
+  {
+    title: "Next UI",
+    link: "https://nextui.org/",
+  },
+  {
+    title: "Lukacho UI",
+    link: "https://ui.lukacho.com/components",
+  },
+  {
+    title: "Ibelick lab",
+    link: "https://ibelick.com/lab",
+  },
+];
 export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
   {
     title: "Admin Dashboard",
@@ -986,6 +1071,11 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
     sub: "Loaders in react",
     link: "https://www.davidhu.io/react-spinners/",
   },
+  {
+    title: "Animated Hamburger menu icon",
+    sub: "Tasty CSS-animated hamburgers",
+    link: "https://jonsuh.com/hamburgers/",
+  },
 ];
 
 export const LandingComponentsData: LandingComponentsDataType[] = [
@@ -1020,12 +1110,37 @@ export const LandingComponentsData: LandingComponentsDataType[] = [
     tech: ["tailwind", "shadcn-ui", "framer-motion"],
     link: "https://magicui.design/docs/components/gauge-circle",
   },
+  {
+    title: "Modern Hero Section",
+    tech: ["tailwind", "radix-ui"],
+    link: "https://www.farmui.com/components/hero-section",
+  },
 ];
 
 export const BackgroundData: BackgroundDataType[] = [
   {
     title: "Modern Backgrounds",
     link: "https://bg.ibelick.com/",
+  },
+  {
+    title: "Blurry blob",
+    link: "https://animata.design/docs/background/blurry-blob",
+  },
+  {
+    title: "Moving Gradient",
+    link: "https://animata.design/docs/background/moving-gradient",
+  },
+  {
+    title: "Animated Grid",
+    link: "https://ui.lukacho.com/components/animated-grid-background",
+  },
+  {
+    title: "Grid Beam",
+    link: "https://ui.lukacho.com/components/background-grid-beam",
+  },
+  {
+    title: "Fade in gradiant",
+    link: "https://ui.lukacho.com/components/background-lights",
   },
 ];
 
