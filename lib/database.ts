@@ -409,6 +409,8 @@ export function cn(...inputs) {
     title: "Zustand State Management Setup",
     code: `
 import { create } from "zustand";
+//import { devtools, persist } from 'zustand/middleware';
+
 
 const initialState = {
   courses:[]
