@@ -11,40 +11,18 @@ export default function Footer() {
         <div className="text-md pt-6">
           Made with ❤️ by
           <span className="text-blue-800 ml-1">
-            <Link href="https://www.linkedin.com/in/faizanahmed-saiyed/">
-              Faizanahmed
-            </Link>
+            <Link href="https://www.devstree.ca/">Devstree IT</Link>
           </span>
         </div>
         <div className="pb-6 flex gap-6 text-sm">
           <Link
-            href={"https://www.linkedin.com/in/faizanahmed-saiyed/"}
+            href={"https://www.linkedin.com/company/devstreeit/mycompany/"}
             rel="noopener noreferrer"
             target="_blank"
           >
             <div className="flex justify-center items-center gap-1">
               <Linkedin size={15} />
               Linkedin
-            </div>
-          </Link>
-          <Link
-            href={"https://github.com/Faizanahmedsy/kitty-kit"}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <div className="flex justify-center items-center gap-1">
-              <Github size={15} />
-              Github
-            </div>
-          </Link>
-          <Link
-            href={"mailto:saiyed.faizanahmed1@gmail.com"}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <div className="flex justify-center items-center gap-1">
-              <MailOpen size={15} />
-              Mail
             </div>
           </Link>
         </div>

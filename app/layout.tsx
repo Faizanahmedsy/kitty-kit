@@ -12,7 +12,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
   title: "Kitty Kit",
-  description: "An all in one frontend toolkit by Faizanahmed",
+  description: "An all in one frontend toolkit by Devstree",
 };
 
 export default function RootLayout({

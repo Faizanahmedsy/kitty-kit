@@ -5,7 +5,7 @@ import { Code, monoBlue } from "react-code-blocks";
 import { toast } from "sonner";
 import CopyBtn from "../copy-btn";
 
-export const codeText = `git clone https://github.com/Faizanahmedsy/next-starter-v1.git`;
+export const codeText = `git clone https://github.com/devstree/next-starter-v1.git`;
 export default function NewProjectTemplate() {
   function copyToClipboard() {
     toast.success("Copied to clipboard");
