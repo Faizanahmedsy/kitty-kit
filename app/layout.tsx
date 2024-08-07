@@ -5,6 +5,7 @@ import Navbar from "@/components/modules/navbar/navbar";
 import Footer from "@/components/modules/footer/footer";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
           <main className="mt-11 overflow-hidden">{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
