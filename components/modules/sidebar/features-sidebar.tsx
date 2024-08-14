@@ -28,7 +28,7 @@ export const sideMenuItems = [
     href: "/features/ui-libraries",
   },
   {
-    title: "Use Full Websites",
+    title: "Tools",
     href: "/features/useful-websites",
   },
 ];

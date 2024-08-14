@@ -846,6 +846,42 @@ export const componentData: componentsDataType = [
     title: "Modern Tabs",
     link: "https://ui.lukacho.com/components/tab-list",
   },
+  {
+    title: "Distorted Glass",
+    link: "https://ibelick.com/lab/distorted-glass",
+  },
+  {
+    title: "underlay Action Sheet",
+    link: "https://ibelick.com/lab/underlay-action-sheet",
+  },
+  {
+    title: "Animated Popover Menu",
+    link: "https://ibelick.com/lab/family-popover-menu",
+  },
+  {
+    title: "Card Stack reveal on hover",
+    link: "https://ibelick.com/lab/run-stats-stacks",
+  },
+  {
+    title: "Swipeable Card Stack",
+    link: "https://ibelick.com/lab/swipeable-stack-cards",
+  },
+  {
+    title: "Label Indicator Carousel",
+    link: "https://ibelick.com/lab/label-indicator-carousel",
+  },
+  {
+    title: "Github style Commit Graph",
+    link: "https://animata.design/docs/graphs/commit-graph",
+  },
+  {
+    title: "Text Hover with Svg reveal",
+    link: "https://animata.design/docs/hero/hero-section-text-hover",
+  },
+  {
+    title: "Text Hover with Svg reveal 2",
+    link: "https://animata.design/docs/list/reveal-image",
+  },
 ];
 
 export const useFullWebsites = [
@@ -857,6 +893,38 @@ export const useFullWebsites = [
   {
     title: "Free illustrations",
     link: "https://undraw.co/search",
+  },
+  {
+    title: "Mobbin - Design Inspiration",
+    link: "https://mobbin.com/browse/web/apps",
+  },
+  {
+    title: "Unsection - Design Inspiration",
+    link: "https://www.unsection.com/",
+  },
+  {
+    title: "Tailwind Gradient Generator",
+    link: "https://www.creative-tim.com/twcomponents/gradient-generator",
+  },
+  {
+    title: "Make Documentation Websites",
+    link: "https://www.gitbook.com/",
+  },
+  {
+    title: "Lottie Files - Animated Gifs with high performance",
+    link: "https://www.gitbook.com/",
+  },
+  {
+    title: "Make Documentation Websites",
+    link: "https://www.gitbook.com/",
+  },
+  {
+    title: "Shadcn Theme Generator",
+    link: "https://zippystarter.com/tools/shadcn-ui-theme-generator",
+  },
+  {
+    title: "Pdfs with Tailwind",
+    link: "https://tailwindpdf.com/",
   },
 ];
 
@@ -876,6 +944,10 @@ export const uiLibrariesData: UiLibrariesDataType[] = [
     link: "https://magicui.design/",
   },
   {
+    title: "UI Verse",
+    link: "https://uiverse.io/",
+  },
+  {
     title: "Hover Dev",
     link: "https://www.hover.dev/",
   },
@@ -890,6 +962,18 @@ export const uiLibrariesData: UiLibrariesDataType[] = [
   {
     title: "Ibelick lab",
     link: "https://ibelick.com/lab",
+  },
+  {
+    title: "Motion primitives",
+    link: "https://motion-primitives.com/",
+  },
+  {
+    title: "Mantine Ui",
+    link: "https://mantine.dev/",
+  },
+  {
+    title: "Animata Design",
+    link: "https://animata.design/",
   },
 ];
 export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
@@ -1077,6 +1161,11 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
     title: "Animated Hamburger menu icon",
     sub: "Tasty CSS-animated hamburgers",
     link: "https://jonsuh.com/hamburgers/",
+  },
+  {
+    title: "Animation Library",
+    sub: "Tasty CSS-animated hamburgers",
+    link: "https://animejs.com/",
   },
 ];
 

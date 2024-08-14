@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex flex-col justify-center items-center w-full font-extrabold gap-2">
         <div className="text-md pt-6">
           Made with ❤️ by
-          <span className="text-blue-800 ml-1">
+          <span className="text-blue-800  dark:text-blue-200 ml-1">
             <Link href="https://www.linkedin.com/in/faizanahmed-saiyed/">
               Faizanahmed
             </Link>
