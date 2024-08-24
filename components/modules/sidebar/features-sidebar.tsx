@@ -19,6 +19,18 @@ export const sideMenuItems = [
     title: "Website Backgrounds",
     href: "/features/backgrounds",
   },
+  {
+    title: "Components",
+    href: "/features/components",
+  },
+  {
+    title: "Modern UI Libraries",
+    href: "/features/ui-libraries",
+  },
+  {
+    title: "Tools",
+    href: "/features/useful-websites",
+  },
 ];
 
 export default function FeaturesSidebar({}: Props) {

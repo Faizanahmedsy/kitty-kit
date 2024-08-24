@@ -1,9 +1,11 @@
 import {
   BackgroundDataType,
+  componentsDataType,
   HelperDataType,
   LandingComponentsDataType,
   MissalinousFeaturedDataType,
   PostDataType,
+  UiLibrariesDataType,
 } from "@/types";
 
 export const PostData: PostDataType = [
@@ -407,6 +409,8 @@ export function cn(...inputs) {
     title: "Zustand State Management Setup",
     code: `
 import { create } from "zustand";
+//import { devtools, persist } from 'zustand/middleware';
+
 
 const initialState = {
   courses:[]
@@ -804,7 +808,174 @@ export const TricksData = unfliteredTricksData.map((trick) => ({
     showLineNumbers: true,
   },
 }));
+export const componentData: componentsDataType = [
+  {
+    title: "Animated Model",
+    sub: " dialog that overlays the primary content with a window, drawing  ",
+    link: "https://animata.design/docs/overlay/modal",
+  },
+  {
+    title: "Animated Popover",
+    link: "https://ibelick.com/lab/family-popover-menu",
+  },
+  {
+    title: "Github style shiny cards",
+    link: "https://ibelick.com/lab/card-spotlight",
+  },
+  {
+    title: "Animated Buttom",
+    link: "https://ibelick.com/lab/button-gooey",
+  },
+  {
+    title: "Mouse Follow Caption",
+    link: "https://ibelick.com/lab/mouse-follow-caption",
+  },
+  {
+    title: "IOS Slide to unlock",
+    link: "https://ibelick.com/lab/ios-slide-unlock",
+  },
+  {
+    title: "Circular Exploding Menu",
+    link: "https://ibelick.com/lab/exploding-menu",
+  },
+  {
+    title: "Browser Mock",
+    link: "https://ui.lukacho.com/components/mock-browser",
+  },
+  {
+    title: "Modern Tabs",
+    link: "https://ui.lukacho.com/components/tab-list",
+  },
+  {
+    title: "Distorted Glass",
+    link: "https://ibelick.com/lab/distorted-glass",
+  },
+  {
+    title: "underlay Action Sheet",
+    link: "https://ibelick.com/lab/underlay-action-sheet",
+  },
+  {
+    title: "Animated Popover Menu",
+    link: "https://ibelick.com/lab/family-popover-menu",
+  },
+  {
+    title: "Card Stack reveal on hover",
+    link: "https://ibelick.com/lab/run-stats-stacks",
+  },
+  {
+    title: "Swipeable Card Stack",
+    link: "https://ibelick.com/lab/swipeable-stack-cards",
+  },
+  {
+    title: "Label Indicator Carousel",
+    link: "https://ibelick.com/lab/label-indicator-carousel",
+  },
+  {
+    title: "Github style Commit Graph",
+    link: "https://animata.design/docs/graphs/commit-graph",
+  },
+  {
+    title: "Text Hover with Svg reveal",
+    link: "https://animata.design/docs/hero/hero-section-text-hover",
+  },
+  {
+    title: "Text Hover with Svg reveal 2",
+    link: "https://animata.design/docs/list/reveal-image",
+  },
+];
 
+export const useFullWebsites = [
+  {
+    title: "Free to use 404 pages",
+    sub: "",
+    link: "https://error404.fun/",
+  },
+  {
+    title: "Free illustrations",
+    link: "https://undraw.co/search",
+  },
+  {
+    title: "Mobbin - Design Inspiration",
+    link: "https://mobbin.com/browse/web/apps",
+  },
+  {
+    title: "Unsection - Design Inspiration",
+    link: "https://www.unsection.com/",
+  },
+  {
+    title: "Tailwind Gradient Generator",
+    link: "https://www.creative-tim.com/twcomponents/gradient-generator",
+  },
+  {
+    title: "Make Documentation Websites",
+    link: "https://www.gitbook.com/",
+  },
+  {
+    title: "Lottie Files - Animated Gifs with high performance",
+    link: "https://www.gitbook.com/",
+  },
+  {
+    title: "Make Documentation Websites",
+    link: "https://www.gitbook.com/",
+  },
+  {
+    title: "Shadcn Theme Generator",
+    link: "https://zippystarter.com/tools/shadcn-ui-theme-generator",
+  },
+  {
+    title: "Pdfs with Tailwind",
+    link: "https://tailwindpdf.com/",
+  },
+];
+
+export const uiLibrariesData: UiLibrariesDataType[] = [
+  {
+    title: "ShadCn",
+    sub: "Best and Most customizable UI Library",
+    link: "https://ui.shadcn.com/",
+    fav: true,
+  },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com/",
+  },
+  {
+    title: "Magic UI",
+    link: "https://magicui.design/",
+  },
+  {
+    title: "UI Verse",
+    link: "https://uiverse.io/",
+  },
+  {
+    title: "Hover Dev",
+    link: "https://www.hover.dev/",
+  },
+  {
+    title: "Next UI",
+    link: "https://nextui.org/",
+  },
+  {
+    title: "Lukacho UI",
+    link: "https://ui.lukacho.com/components",
+  },
+  {
+    title: "Ibelick lab",
+    link: "https://ibelick.com/lab",
+  },
+  {
+    title: "Motion primitives",
+    link: "https://motion-primitives.com/",
+  },
+  {
+    title: "Mantine Ui",
+    link: "https://mantine.dev/",
+  },
+  {
+    title: "Animata Design",
+    link: "https://animata.design/",
+  },
+];
 export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
   {
     title: "Admin Dashboard",
@@ -986,6 +1157,16 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
     sub: "Loaders in react",
     link: "https://www.davidhu.io/react-spinners/",
   },
+  {
+    title: "Animated Hamburger menu icon",
+    sub: "Tasty CSS-animated hamburgers",
+    link: "https://jonsuh.com/hamburgers/",
+  },
+  {
+    title: "Animation Library",
+    sub: "Tasty CSS-animated hamburgers",
+    link: "https://animejs.com/",
+  },
 ];
 
 export const LandingComponentsData: LandingComponentsDataType[] = [
@@ -1020,12 +1201,37 @@ export const LandingComponentsData: LandingComponentsDataType[] = [
     tech: ["tailwind", "shadcn-ui", "framer-motion"],
     link: "https://magicui.design/docs/components/gauge-circle",
   },
+  {
+    title: "Modern Hero Section",
+    tech: ["tailwind", "radix-ui"],
+    link: "https://www.farmui.com/components/hero-section",
+  },
 ];
 
 export const BackgroundData: BackgroundDataType[] = [
   {
     title: "Modern Backgrounds",
     link: "https://bg.ibelick.com/",
+  },
+  {
+    title: "Blurry blob",
+    link: "https://animata.design/docs/background/blurry-blob",
+  },
+  {
+    title: "Moving Gradient",
+    link: "https://animata.design/docs/background/moving-gradient",
+  },
+  {
+    title: "Animated Grid",
+    link: "https://ui.lukacho.com/components/animated-grid-background",
+  },
+  {
+    title: "Grid Beam",
+    link: "https://ui.lukacho.com/components/background-grid-beam",
+  },
+  {
+    title: "Fade in gradiant",
+    link: "https://ui.lukacho.com/components/background-lights",
   },
 ];
 

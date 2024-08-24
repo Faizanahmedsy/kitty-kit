@@ -33,3 +33,19 @@ export type HelperDataType = {
   language: string;
   showLineNumbers: boolean;
 }[];
+
+export type componentsDataType = {
+  title: string;
+  sub?: string;
+  link?: string;
+  github?: string;
+  liveDemo?: string;
+  fav?: boolean;
+}[];
+
+export type UiLibrariesDataType = {
+  title: string;
+  sub?: string;
+  link: string;
+  fav?: boolean;
+};

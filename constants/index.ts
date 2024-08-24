@@ -15,4 +15,8 @@ export const navLinks: { title: string; href: string }[] = [
     title: "Features",
     href: "/features/miscellaneous",
   },
+  {
+    title: "Learn",
+    href: "/learn",
+  },
 ];
