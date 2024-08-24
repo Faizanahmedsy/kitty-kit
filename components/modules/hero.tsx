@@ -1,32 +1,41 @@
 import React from "react";
 import WordPullUp from "../magicui/word-pull-up";
 import GradualSpacing from "../magicui/gradual-spacing";
+import { Button } from "../ui/button";
+import { ArrowBigDown, ArrowBigRight, ArrowBigRightDash } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-center items-center h-[calc(100vh-150px)]">
-      {/* <h1 className="text-6xl font-extrabold ">
-          <span className="text-blue-700 mr-6">Kitty Kit</span>
-       
-        </h1> */}
-      <div className="flex">
-        <GradualSpacing
-          className="text-6xl  font-extrabold tracking-[-0.02em] text-blue-700  dark:text-white md:text-7xl md:leading-[5rem]"
-          text="Kitty Kit, "
-        />
-        <GradualSpacing
-          className="text-6xl  font-extrabold tracking-[-0.02em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
-          text="a frontend"
-          delayMultiple={0.04}
-        />
+    <>
+      <div className="flex flex-col justify-center items-center min-h-[calc(100vh-50px)] bg-gradient-to-t from-slate-900 to-blue-900">
+        <div className="flex">
+          <GradualSpacing
+            className="text-6xl  font-extrabold tracking-[-0.02em] text-blue-700  dark:text-slate-200 md:text-[6rem] md:leading-[7.0rem]"
+            text="Kitty Kit, "
+          />
+          <GradualSpacing
+            className="text-6xl  font-extrabold tracking-[-0.02em] text-black dark:text-slate-200 md:text-[6rem] md:leading-[7.0rem]"
+            text="a frontend"
+            delayMultiple={0.04}
+          />
+        </div>
+        <div>
+          <GradualSpacing
+            className="text-6xl  font-extrabold tracking-[-0.02em] text-black dark:text-slate-200 md:text-[6rem] md:leading-[7.0rem]"
+            text="toolkit for the web"
+            delayMultiple={0.04}
+          />
+        </div>
+        <p className="text-center">
+          It is a collection of tools, code snippets components, and templates{" "}
+          <br />
+          to help you build your next project faster.
+        </p>
+        <Button className="mt-10 bg-cyan-700 text-cyan-50 rounded-full">
+          Get Started
+          <ArrowBigRight className="ml-2" />
+        </Button>
       </div>
-      <div>
-        <GradualSpacing
-          className="text-6xl  font-extrabold tracking-[-0.02em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
-          text="toolkit for the web"
-          delayMultiple={0.04}
-        />
-      </div>
-    </div>
+    </>
   );
 }
