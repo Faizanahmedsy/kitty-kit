@@ -13,7 +13,7 @@ export default function NewProjectTemplate() {
   }
 
   return (
-    <div className="px-32 py-10 bg-gradient-to-b from-slate-900 to-slate-900">
+    <div className="px-32 py-10 ">
       <div className="border-[4px]  rounded-3xl p-14">
         <div className="grid md:grid-cols-2 gap-4">
           <div>

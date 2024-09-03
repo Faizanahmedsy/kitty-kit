@@ -7,7 +7,7 @@ import { ArrowBigDown, ArrowBigRight, ArrowBigRightDash } from "lucide-react";
 export default function Hero() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center min-h-[calc(100vh-50px)] bg-gradient-to-t from-slate-900 to-blue-900">
+      <div className="flex flex-col justify-center items-center min-h-[calc(100vh-50px)] ">
         <div className="flex">
           <GradualSpacing
             className="text-6xl  font-extrabold tracking-[-0.02em] text-blue-700  dark:text-slate-200 md:text-[6rem] md:leading-[7.0rem]"

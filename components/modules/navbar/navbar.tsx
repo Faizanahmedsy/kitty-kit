@@ -28,7 +28,7 @@ import dynamic from "next/dynamic";
 export function Logo() {
   return (
     <>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-start items-center w-[200px]">
         <div className="font-bold text-blue-800 text-2xl dark:text-blue-300">
           Kitty Kit
         </div>
@@ -134,7 +134,7 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="md:block hidden">
+        <div className="md:flex justify-end hidden  w-[200px]">
           <ThemeToggle />
         </div>
         <div className="md:hidden flex justify-center items-center gap-4">

@@ -20,3 +20,5 @@ export const navLinks: { title: string; href: string }[] = [
     href: "/learn",
   },
 ];
+
+export const PRODUCTION_MODE = true;
