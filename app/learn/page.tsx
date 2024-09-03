@@ -1,5 +1,5 @@
-import React from "react";
-
+"use client";
+import Stepper from "@keyvaluesystems/react-stepper";
 type Props = {};
 
 export default function LearnPage({}: Props) {
@@ -49,6 +49,26 @@ export default function LearnPage({}: Props) {
           </div>
         </div>
       </div>
+      <Stepper
+        steps={[
+          {
+            stepLabel: "Step 1",
+            stepDescription: "This is Step 1",
+            completed: true,
+          },
+          {
+            stepLabel: "Step 2",
+            stepDescription: "This is Step 2",
+            completed: false,
+          },
+          {
+            stepLabel: "Step 3",
+            stepDescription: "This is Step 3",
+            completed: false,
+          },
+        ]}
+        currentStepIndex={1}
+      />
     </>
   );
 }
