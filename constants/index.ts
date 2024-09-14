@@ -4,6 +4,10 @@ export const navLinks: { title: string; href: string }[] = [
     href: "/",
   },
   {
+    title: "Features",
+    href: "/features/miscellaneous",
+  },
+  {
     title: "Helpers",
     href: "/helpers",
   },
@@ -11,10 +15,7 @@ export const navLinks: { title: string; href: string }[] = [
     title: "Tricks",
     href: "/tricks",
   },
-  {
-    title: "Features",
-    href: "/features/miscellaneous",
-  },
+
   {
     title: "Learn",
     href: "/learn",

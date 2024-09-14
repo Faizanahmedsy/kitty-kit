@@ -3,6 +3,7 @@ import WordPullUp from "../magicui/word-pull-up";
 import GradualSpacing from "../magicui/gradual-spacing";
 import { Button } from "../ui/button";
 import { ArrowBigDown, ArrowBigRight, ArrowBigRightDash } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -31,10 +32,12 @@ export default function Hero() {
           <br />
           to help you build your next project faster.
         </p>
-        <Button className="mt-10 bg-cyan-700 text-cyan-50 rounded-full">
-          Get Started
-          <ArrowBigRight className="ml-2" />
-        </Button>
+        <Link href="/features/miscellaneous">
+          <Button className="mt-10 bg-cyan-700 text-cyan-50 rounded-full">
+            Get Started
+            <ArrowBigRight className="ml-2" />
+          </Button>
+        </Link>
       </div>
     </>
   );

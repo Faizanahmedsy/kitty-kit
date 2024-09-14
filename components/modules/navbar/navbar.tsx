@@ -101,7 +101,7 @@ export default function Navbar() {
                         className={cn(
                           `text-sm font-medium  leading-none no-underline outline-none transition-colors hover:border-blue-100 dark:hover:border-blue-800  hover:text-accent-foreground focus:border-blue-50   dark:focus:border-blue-800   
                       
-                          hover:font-bold 
+                          hover:bg-blue-950/80
                          
                           focus:text-accent-foreground  px-5 py-2 rounded-2xl cursor-pointer select-none`,
                           pathname === link.href

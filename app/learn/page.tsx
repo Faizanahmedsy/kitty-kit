@@ -1,7 +1,7 @@
 "use client";
-import UnderConstruction from "@/components/global/under-construction";
+import UnderConstruction from "@/components/modules/under-construction";
+import UnderConstructionV2 from "@/components/UnderConstructionV2";
 import { PRODUCTION_MODE } from "@/constants";
-import Stepper from "@keyvaluesystems/react-stepper";
 type Props = {};
 
 //TODO : added 6 step conunte
