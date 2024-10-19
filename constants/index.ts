@@ -4,6 +4,10 @@ export const navLinks: { title: string; href: string }[] = [
     href: "/",
   },
   {
+    title: "Kitty Cli",
+    href: "/kitty-cli",
+  },
+  {
     title: "Features",
     href: "/features/miscellaneous",
   },

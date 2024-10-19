@@ -1,0 +1,16 @@
+{
+  "list": {
+    "ListComponent": "import React from 'react';\n\nconst {moduleName}List = () => {\n  return <div>{moduleName} List Component</div>;\n};\n\nexport default {moduleName}List;",
+    "ListTable": "import React from 'react';\n\nconst {moduleName}ListTable = () => {\n  return <div>{moduleName} List Table</div>;\n};\n\nexport default {moduleName}ListTable;",
+    "Columns": "export const columns = [{\n  title: 'Name',\n  dataIndex: 'name',\n  key: 'name'\n}];"
+  },
+  "details": {
+    "DetailComponent": "import React from 'react';\n\nconst {moduleName}Detail = () => {\n  return <div>{moduleName} Detail Component</div>;\n};\n\nexport default {moduleName}Detail;"
+  },
+  "mutate": {
+    "CreateUpdateComponent": "import React from 'react';\n\nconst CreateUpdate{moduleName} = () => {\n  return <div>Create or Update {moduleName}</div>;\n};\n\nexport default CreateUpdate{moduleName};"
+  },
+  "types": {
+    "Types": "export interface {moduleName} {\n  id: string;\n  name: string;\n}"
+  }
+}

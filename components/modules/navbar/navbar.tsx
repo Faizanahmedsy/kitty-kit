@@ -24,6 +24,11 @@ const MobileNavbar = dynamic(
 );
 import { navLinks } from "@/constants";
 import dynamic from "next/dynamic";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function Logo() {
   return (
@@ -32,9 +37,16 @@ export function Logo() {
         <div className="font-bold text-blue-800 text-2xl dark:text-blue-300">
           Kitty Kit
         </div>
-        <div className="border-2 rounded-sm mx-2 text-xs p-1 bg-zinc-200 dark:bg-zinc-800">
-          beta
-        </div>
+        <Tooltip>
+          <TooltipTrigger>
+            <div className="border-2 rounded-sm mx-2 text-xs p-1 bg-zinc-200 dark:bg-zinc-800">
+              beta
+            </div>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>This app is under development, expect a lot of bugs</p>
+          </TooltipContent>
+        </Tooltip>
       </div>
     </>
   );

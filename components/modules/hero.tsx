@@ -1,14 +1,20 @@
-import React from "react";
-import WordPullUp from "../magicui/word-pull-up";
+import { ArrowBigRight } from "lucide-react";
+import Link from "next/link";
 import GradualSpacing from "../magicui/gradual-spacing";
 import { Button } from "../ui/button";
-import { ArrowBigDown, ArrowBigRight, ArrowBigRightDash } from "lucide-react";
-import Link from "next/link";
 
 export default function Hero() {
   return (
     <>
       <div className="flex flex-col justify-center items-center min-h-[calc(100vh-50px)] ">
+        {/* //New Compoent cta */}
+        <Link href="/kitty-cli">
+          <div className="flex justify-center items-center bg-cyan-400 rounded-full px-4 text-cyan-900 font-bold">
+            <h2>Introducing Kitty Cli</h2>
+            <ArrowBigRight className="ml-2" />
+          </div>
+        </Link>
+
         <div className="flex">
           <GradualSpacing
             className="text-6xl  font-extrabold tracking-[-0.02em] text-blue-700  dark:text-slate-200 md:text-[6rem] md:leading-[7.0rem]"
