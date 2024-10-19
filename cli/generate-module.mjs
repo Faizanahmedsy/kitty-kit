@@ -162,6 +162,13 @@ paths.forEach((filePath) => {
     console.log(`Created directory: ${dir}`);
   }
 
+  // if (fs.existsSync(path.join(__dirname, moduleFolder))) {
+  //   console.error(
+  //     `Module "${moduleFolder}" already exists. Please choose a different name.`
+  //   );
+  //   process.exit(1);
+  // }
+
   // Create the file if it doesn't exist
   if (!fs.existsSync(fullPath)) {
     fs.writeFileSync(fullPath, "");

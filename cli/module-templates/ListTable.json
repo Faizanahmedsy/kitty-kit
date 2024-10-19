@@ -1,0 +1,3 @@
+{
+  "content": "import React from 'react';\n\nconst {moduleName}ListTable = () => {\n  return <div>{moduleName} List Table</div>;\n};\n\nexport default {moduleName}ListTable;"
+}

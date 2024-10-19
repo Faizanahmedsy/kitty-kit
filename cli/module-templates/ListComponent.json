@@ -1,0 +1,3 @@
+{
+  "content": "import React from 'react';\n\nconst {moduleName}List = () => {\n  return <div>{moduleName} List Component</div>;\n};\n\nexport default {moduleName}List;"
+}

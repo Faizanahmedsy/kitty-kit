@@ -1,0 +1,3 @@
+{
+  "content": "export interface {moduleName}Data {\n  id: string;\n  {moduleName.toLowerCase()}_name: string;\n  created_at: string;\n  updated_at: string;\n  // Add more fields as needed\n}"
+}
