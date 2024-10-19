@@ -57,9 +57,6 @@ if (!moduleName) {
 
 const moduleFolder = moduleName.toLowerCase();
 
-//NOTE: THIS WILL GENERATE THE FOLDERS AT THE SAME LEVEL WHERE THIS SCRIPT IS LOCATED
-// YOU CAN MANUALLY MOVE THE GENERATED FOLDERS TO DIRECTORY OF YOUR CHOICE
-
 const paths = [
   `${moduleFolder}/list/${moduleName}List.tsx`,
   `${moduleFolder}/list/${moduleName}ListTable.tsx`,
