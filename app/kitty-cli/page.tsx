@@ -10,20 +10,20 @@ type Props = {};
 export default function LearnPage({}: Props) {
   return (
     <>
-      <div className="min-h-screen mt-6 bg-gradient-to-br from-black via-blue-950/50 to-black text-white font-sans">
+      <div className="min-h-screen mt-6 bg-gradient-to-br from-black via-teal-950/50 to-black text-white font-sans">
         <div className="container mx-auto px-4 py-16">
           <nav className="flex justify-between items-center mb-16">
             <div className="text-2xl font-bold">Kitty CLI</div>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 flex items-center">
+            {/* <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-full transition duration-300 flex items-center">
               Get Started <ChevronRight className="ml-2" size={18} />
-            </button>
+            </button> */}
           </nav>
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 pb-10">
             {/* Left side */}
             <div className="lg:w-1/2 space-y-8">
               <h1 className={cn("text-7xl font-bold leading-tight ")}>
-                <span className="bg-clip-text text-blue-300 ">Ship Faster</span>
+                <span className="bg-clip-text text-teal-300 ">Ship Faster</span>
                 <br />
                 <span className="bg-clip-text  text-cyan-300 ">
                   Ship Sexier
@@ -35,7 +35,9 @@ export default function LearnPage({}: Props) {
                 next level.
               </p>
               <div className="flex space-x-4">
-                <Button className="rounded-full text-white">Learn More</Button>
+                <Button className="rounded-full text-white bg-teal-800">
+                  Learn More
+                </Button>
                 <Button className="rounded-full text-white" variant={"outline"}>
                   <Link href="/github.com/faizanahmedsy/kitty-kit">
                     {" "}
@@ -45,7 +47,7 @@ export default function LearnPage({}: Props) {
               </div>
             </div>
 
-            <Card className="lg:w-1/2 bg-blue-900 bg-opacity-5 backdrop-filter backdrop-blur-lg  shadow-2xl">
+            <Card className="lg:w-1/2 bg-teal-900 bg-opacity-5 backdrop-filter backdrop-blur-lg  shadow-2xl">
               <CardHeader>
                 <CardTitle>Key Features</CardTitle>
               </CardHeader>
@@ -78,7 +80,7 @@ export default function LearnPage({}: Props) {
                     },
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <div className="mr-4 p-2 bg-blue-500 rounded-full">
+                      <div className="mr-4 p-2 bg-teal-500 rounded-full">
                         <feature.icon className="text-white" size={24} />
                       </div>
                       <div>
@@ -101,7 +103,7 @@ export default function LearnPage({}: Props) {
             </h3>
             <ol className="space-y-4 text-gray-300">
               <li className="flex items-start">
-                <div className="mr-4 p-2 bg-blue-500 rounded-full">
+                <div className="mr-4 p-2 bg-teal-500 rounded-full">
                   <Terminal className="text-white" size={24} />
                 </div>
                 <div>
@@ -119,7 +121,7 @@ export default function LearnPage({}: Props) {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="mr-4 p-2 bg-blue-500 rounded-full">
+                <div className="mr-4 p-2 bg-teal-500 rounded-full">
                   <Zap className="text-white" size={24} />
                 </div>
                 <div>
@@ -133,7 +135,7 @@ export default function LearnPage({}: Props) {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="mr-4 p-2 bg-blue-500 rounded-full">
+                <div className="mr-4 p-2 bg-teal-500 rounded-full">
                   <Package className="text-white" size={24} />
                 </div>
                 <div>
@@ -154,7 +156,7 @@ export default function LearnPage({}: Props) {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="mr-4 p-2 bg-blue-500 rounded-full">
+                <div className="mr-4 p-2 bg-teal-500 rounded-full">
                   <Terminal className="text-white" size={24} />
                 </div>
                 <div>
