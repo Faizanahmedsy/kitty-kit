@@ -28,7 +28,7 @@ import dynamic from "next/dynamic";
 export function Logo() {
   return (
     <>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-start items-center w-[200px]">
         <div className="font-bold text-blue-800 text-2xl dark:text-blue-300">
           Kitty Kit
         </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
                         className={cn(
                           `text-sm font-medium  leading-none no-underline outline-none transition-colors hover:border-blue-100 dark:hover:border-blue-800  hover:text-accent-foreground focus:border-blue-50   dark:focus:border-blue-800   
                       
-                          hover:font-bold 
+                          hover:bg-blue-950/80
                          
                           focus:text-accent-foreground  px-5 py-2 rounded-2xl cursor-pointer select-none`,
                           pathname === link.href
@@ -134,7 +134,7 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="md:block hidden">
+        <div className="md:flex justify-end hidden  w-[200px]">
           <ThemeToggle />
         </div>
         <div className="md:hidden flex justify-center items-center gap-4">

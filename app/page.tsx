@@ -5,9 +5,11 @@ import Resources from "@/components/modules/resources";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <NewProjectTemplate />
-      {/* <Resources /> */}
+      <div className="bg-gradient-to-t from-black to-blue-900/45">
+        <Hero />
+        <NewProjectTemplate />
+        {/* <Resources /> */}
+      </div>
     </>
   );
 }

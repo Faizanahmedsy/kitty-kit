@@ -6,10 +6,9 @@ import Footer from "@/components/modules/footer/footer";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { poppins } from "@/lib/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
   title: "Kitty Kit",
