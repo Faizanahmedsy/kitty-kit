@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "create-module": "node generate-module.mjs",
     "dev": "next dev -p 6100",
     "build": "next build",
     "start": "next start",
