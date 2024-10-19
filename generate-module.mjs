@@ -5,6 +5,46 @@ import { fileURLToPath } from "url";
 // Made by Faizanahmed Saiyed
 // https://faizansaiyed.vercel.app/
 
+/**
+ * Module Generator Script
+ *
+ * This script generates a predefined set of files and folders for a new module
+ * in your project. It can be customized based on your preferred project structure.
+ *
+ * USAGE INSTRUCTIONS:
+ * 1. Save this script as `generate-module.js` or `generate-module.mjs` (for ES Modules)
+ *    in the root directory of your project.
+ *
+ * 2. Add the following command to the `scripts` section of your `package.json`:
+ *    For CommonJS:
+ *      "generate": "node generate-module.js"
+ *    For ES Modules:
+ *      "generate": "node --experimental-modules generate-module.mjs"
+ *
+ * 3. Run the script using the command:
+ *    npm run generate ModuleName
+ *    Replace `ModuleName` with the desired name for your new module (e.g., "User").
+ *
+ * NOTE:
+ * - The generated folders and files will be created in the same directory as the script.
+ * - You can manually move the generated folders/files to your preferred directory structure.
+ * - Feel free to modify the predefined paths and structures in the `paths` array
+ *   according to your project's requirements.
+ *
+ * EXAMPLES OF GENERATED FILES:
+ * - list/UserList.tsx
+ * - details/UserDetail.tsx
+ * - mutate/CreateUpdateUser.tsx
+ * - types.ts
+ *
+ * You can customize the `paths` variable to match various project structures,
+ * such as:
+ * - Full-Stack Project Structure
+ * - Frontend Component Structure
+ * - Backend API Structure
+ * - And many more (see commented sections below).
+ */
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
