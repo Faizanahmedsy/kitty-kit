@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "create-module": "node generate-module.mjs",
+    "generate": "node generate-module-v2.mjs",
     "dev": "next dev -p 6100",
     "build": "next build",
     "start": "next start",
