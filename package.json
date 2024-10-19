@@ -1,11 +1,9 @@
 {
   "name": "kitty-devstree",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
-    "generate-v3": "node cli/generate-module-v3.mjs",
-    "create-module": "node cli/generate-module.mjs",
-    "generate-v2": "node cli/generate-module-v2.mjs",
+    "gen": "node cli/generate-module-v4.mjs",
     "dev": "next dev -p 6100",
     "build": "next build",
     "start": "next start",

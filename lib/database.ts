@@ -1013,6 +1013,13 @@ export const MissalinousFeaturedData: MissalinousFeaturedDataType[] = [
     fav: true,
   },
   {
+    title: `Search params state manager for Next.js`,
+    sub: "Search params state manager for Next.js",
+    github: "https://github.com/47ng/nuqs",
+    liveDemo: "https://nuqs.47ng.com/",
+    fav: true,
+  },
+  {
     title: "AutoForm",
     sub: "AutoForm is a React component that automatically creates a @shadcn/ui form based on a zod schema.",
     github: "https://github.com/vantezzen/auto-form",
