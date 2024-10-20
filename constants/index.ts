@@ -8,6 +8,10 @@ export const navLinks: { title: string; href: string }[] = [
     href: "/kitty-cli",
   },
   {
+    title: "Kitty Start",
+    href: "/kitty-start",
+  },
+  {
     title: "Features",
     href: "/features/miscellaneous",
   },

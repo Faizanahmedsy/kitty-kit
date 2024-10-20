@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = {};
 
-export default function LearnPage({}: Props) {
+export default function KittyCliPage({}: Props) {
   return (
     <>
       <div className="min-h-screen mt-6 bg-gradient-to-br from-black via-teal-950/50 to-black text-white font-sans">
@@ -23,11 +23,9 @@ export default function LearnPage({}: Props) {
             {/* Left side */}
             <div className="lg:w-1/2 space-y-8">
               <h1 className={cn("text-7xl font-bold leading-tight ")}>
-                <span className="bg-clip-text text-teal-300 ">Ship Faster</span>
+                <span className="bg-clip-text text-teal-300 ">Build More</span>
                 <br />
-                <span className="bg-clip-text  text-cyan-300 ">
-                  Ship Sexier
-                </span>
+                <span className="bg-clip-text  text-cyan-300 ">Type Less</span>
               </h1>
               <p className="text-xl text-gray-300">
                 Streamline your workflow with our powerful CLI. Build robust
@@ -35,11 +33,13 @@ export default function LearnPage({}: Props) {
                 next level.
               </p>
               <div className="flex space-x-4">
-                <Button className="rounded-full text-white bg-teal-800">
-                  Learn More
-                </Button>
+                <Link href="https://faizanahmed-main.notion.site/Kitty-Cli-v0-1-2-Demo-49a04039730f40aab5820c32c9652878">
+                  <Button className="rounded-full text-white bg-teal-800">
+                    Learn More
+                  </Button>
+                </Link>
                 <Button className="rounded-full text-white" variant={"outline"}>
-                  <Link href="/github.com/faizanahmedsy/kitty-kit">
+                  <Link href="https://github.com/faizanahmedsy/kitty-kit">
                     {" "}
                     Help Me Cook
                   </Link>
@@ -74,9 +74,9 @@ export default function LearnPage({}: Props) {
                     },
                     {
                       icon: Terminal,
-                      title: "Works with all languages and frameworks",
+                      title: "Language and Framework Agnostic",
                       description:
-                        "Kitty CLI is designed to work with any stack you throw at it.",
+                        "Works with all languages and frameworks, Kitty CLI is designed to work with any stack you throw at it.",
                     },
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start">
