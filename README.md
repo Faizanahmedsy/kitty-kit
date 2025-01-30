@@ -1,1 +1,1 @@
-TODO: add a button called "Donate your intellegece which will be a post request where people can add their code in helpers and resources section"
+
