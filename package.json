@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "gen": "node cli/generate-module-v4.mjs",
-    "dev": "next dev -p 6100",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
